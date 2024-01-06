@@ -1,0 +1,6 @@
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        double data[] = new double[10];
+        data[10] = 100; // El problema estaba en esta linea , solo faltaria de cambiarlo seria solo de cambiarlo a :data[9] = 100;
+    }
+}
