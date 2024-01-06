@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el tamaño del arreglo (no te pases de 10 y 20): ");
+        int tamañoArreglo = scanner.nextInt();
+
+        if (tamañoArreglo < 10 || tamañoArreglo > 20) {
+            System.out.println("Tamaño no valido parce. Debe ser entre 10 y 20.");
+            return;
+        }
+
+        char[] arregloChar = new char[tamañoArreglo];
+
+        System.out.println("Ingrese los valores para el arreglo:");
+        for (int i = 0; i < arregloChar.length; i++) {
+            System.out.print("Elemento " + (i + 1) + ": ");
+            arregloChar[i] = scanner.next().charAt(0);
+        }
+
+        System.out.println("Valores en orden inverso:");
+        for (int i = arregloChar.length - 1; i >= 0; i--) {
+            System.out.println("Elemento " + (i + 1) + ": " + arregloChar[i]);
+        }
+    }
+}
