@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Ejercicio7 {
+    public static void main(String[] args) {
+        int[][] arreglo = new int[4][4];
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese los elementos del arreglo:");
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("Ingrese el elemento en la posicion [" + i + "][" + j + "]: ");
+                arreglo[i][j] = scanner.nextInt();
+            }
+        }
+
+        int valorMayor = arreglo[0][0];
+        int valorMenor = arreglo[0][0];
+        int suma = 0;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                int elemento = arreglo[i][j];
+                if (elemento > valorMayor) {
+                    valorMayor = elemento;
+                }
+                if (elemento < valorMenor) {
+                    valorMenor = elemento;
+                }
+                suma += elemento;
+            }
+        }
+
+        double promedio = (double) suma / (4 * 4);
+
+        System.out.println("El valor mayor es: " + valorMayor);
+        System.out.println("El valor menor es: " + valorMenor);
+        System.out.println("El valor promedio es: " + promedio);
+    }
+}
